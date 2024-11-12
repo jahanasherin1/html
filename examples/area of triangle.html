@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>triangle area</title>
+</head>
+<BODY>
+<h2>FIND AREA OF TRIANGLE</h2>
+	<label for"H">ENTER HEIGHT : </LABEL>
+	<input type="number" id="H" min="1" required><br><br>
+	<label for"B">ENTER BREATH : </LABEL>
+	<input type="number" id="B" min="1" required><br><br>
+	
+	<button onclick="area()">CALCULATE AREA</button>	
+	
+	<p id="result"></p>
+
+	<script>
+        function area()
+        {
+        var H=parseInt(document.getElementById("H").value);
+        var B=parseInt(document.getElementById("B").value);
+        
+        area=(B*H)/2;
+        
+        document.getElementById("result").textContent="Product : "+area;
+        }
+        </script>
+        </body>
+</html>

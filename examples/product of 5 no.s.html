@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>5 number pruduct</title>
+	</head>
+	<body>
+	<h3>FIND PRODUCT OF FIVE NUMBERS</h3>
+	<label for"n1">Enter 1st number : </LABEL>
+	<input type="number" id="n1" min="1" required><br><br>
+	<label for"n2">Enter 2nd number: </LABEL>
+	<input type="number" id="n2" min="1" required><br><br>
+	<label for"n3">Enter 3rd number : </LABEL>
+	<input type="number" id="n3" min="1" required><br><br>
+	<label for"n4">Enter 4th number : </LABEL>
+	<input type="number" id="n4" min="1" required><br><br>
+	<label for"n5">Enter 5th number : </LABEL>
+	<input type="number" id="n5" min="1" required><br><br>
+	
+	
+	<button onclick="product()">CALCULATE PRODUCT</button>
+	
+	<p id="result"></p>
+
+	<script>
+        function product()
+        {
+        var n1=document.getElementById("n1").value;
+        var n2=document.getElementById("n2").value;
+        var n3=document.getElementById("n3").value;
+        var n4=document.getElementById("n4").value;
+        var n5=document.getElementById("n5").value;
+        
+        var product=n1*n2*n3*n4*n5;
+        
+        document.getElementById("result").textContent="Product : "+product;
+        }
+        </script>
+</body>
+</html>
