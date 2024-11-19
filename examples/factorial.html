@@ -11,11 +11,10 @@
       function factorial() {
         let num = parseInt(document.getElementById("num").value);
         let factorial = 1;
-        if (isNaN(num)) {
-          document.getElementById("text").innerText = `Invalid number`;
-          return;
-        }
-        for (i = 1; i <= num; i++) factorial *= i;
+        
+        for (i = 1; i <= num; i++) 
+          factorial *= i; 
+          
         document.getElementById("text").innerText =
           "Factorial of " + num + " is :" + factorial;
       }
