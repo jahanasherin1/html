@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prime Checker</title>
+  </head>
+  <body>
+    <h1 class="heading">Prime Numbers</h1>
+    <div class="whole">
+      <label>start</label>
+        <input type="number" id="num" />
+       <label>Limit of prime number:</label>
+      <input type="number" id="stop" />
+      <button type="submit" onclick="generatePrimes()">Check</button>
+      <p id="result">Prime numbers will appear here.</p>
+    </div>
+    <script>
+      function isPrime(num) {
+        for (let i = 2; i <= num/2; i++) {
+          if (num % i === 0) {
+            return false;
+          }
+        }
+        return true;
+      }
+      function generatePrimes() {
+        let number = parseInt(document.getElementById("num").value);
+        let stop = parseInt(document.getElementById("stop").value);
+     
+        let prime = [];
+        for (let i = number; i <= stop; i++) {
+          if (isPrime(i)) prime.push(i);
+        }
+
+        document.getElementById(
+          "result"
+        ).innerHTML = `Prime numbers up to ${number}: ${prime.join(", ")}`;
+      }
+    </script>
+  </body>
+</html>

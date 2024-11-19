@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>factorial</title>
+  </head>
+  <body>
+    <h1>Factorial of a number</h1>
+    <input type="number" id="num" />
+    <button type="submit" onclick="factorial()">Ok</button>
+    <p id="text">hello its here!!!</p>
+    <script>
+      function factorial() {
+        let num = parseInt(document.getElementById("num").value);
+        let factorial = 1;
+        if (isNaN(num)) {
+          document.getElementById("text").innerText = `Invalid number`;
+          return;
+        }
+        for (i = 1; i <= num; i++) factorial *= i;
+        document.getElementById("text").innerText =
+          "Factorial of " + num + " is :" + factorial;
+      }
+    </script>
+  </body>
+</html>

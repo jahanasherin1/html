@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Fibonacci</title>
+  </head>
+  <body>
+    <h1>Fibonacci Numbers</h1>
+    <label>Enter the limit :</label> <input type="text" id="num" />
+    <button type="submit" onclick="display()">ok</button>
+    <p id="result">Just enter the number!!!!!</p>
+    <script>
+      function display() {
+        let num = parseInt(document.getElementById("num").value);
+        if (isNaN(num) || num <= 0) {
+          document.getElementById("result").innerText =
+            "Please enter a valid positive number.";
+          return;
+        }
+
+        let Fibonacci = [];
+        let a = 0,
+          b = 1;
+        if (num >= 1) Fibonacci.push(a);
+        if (num >= 2) Fibonacci.push(b);
+        for (i = 2; i < num; i++) {
+          let next = a + b;
+          Fibonacci.push(next);
+          a = b;
+          b = next;
+        }
+        document.getElementById("result").innerHTML =
+          "Fibonacci numbers =" + Fibonacci.join(",");
+      }
+    </script>
+  </body>
+</html>
