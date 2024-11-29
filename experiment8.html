@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Background color changer</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        colorButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h4>Click the button to change background color</h4>
+<button id="colorButton"type="button"onclick="colorchange();">Change background color</button>
+<script>
+var color=["FF5733", "33FF57", "3357FF", "F0E68C", "FF6347", "8A2BE2", "A52A2A"];  
+var i=0;
+function colorchange()
+{
+   document.body.style.backgroundColor=color[i];
+   i=(i+1) % color.length;
+}
+</script>
+</body>
+</html>
