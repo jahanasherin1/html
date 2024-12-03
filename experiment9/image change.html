@@ -1,0 +1,27 @@
+<html>
+<body>
+<h2 id="txt">FLOWERS</h2>
+<style>
+  #img1{ 
+        width:300px;
+        height:400px;
+        transition: all  0.3s ease;
+       }
+      
+</style>
+  <img id="img1" onmouseover="myfunction()" onmouseout="myfunction2()" src="rose.jpg "></img>
+  <script>
+  function myfunction()
+  {
+     document.getElementById("img1").src="rose.jpg";
+     document.getElementById("txt").innerHTML="ROSE";
+   }
+   
+  function myfunction2()
+  {
+     document.getElementById("img1").src="sunflower.jpg";
+     document.getElementById("txt").innerHTML="SUNFLOWER";
+   }
+  </script>
+</body>
+</html>
