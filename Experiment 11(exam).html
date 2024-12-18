@@ -1,0 +1,92 @@
+<html>
+  <head>
+  <title>Online exam</title>
+     <script>
+            function exam()
+            {
+                var m=0;
+                if(document.examForm.one.value=="a")
+                m=m+1;
+                if(document.examForm.two.value=="b")
+                m=m+1;
+                if(document.examForm.three.value=="a")
+                m=m+1;
+                if(document.examForm.four.value=="a")
+                m=m+1;
+                if(document.examForm.five.value=="b")
+                m=m+1;
+                if(document.examForm.six.value=="b")
+                m=m+1;
+                if(document.examForm.seven.value=="a")
+                m=m+1;
+                if(document.examForm.eight.value=="b")
+                m=m+1;
+                if(document.examForm.nine.value=="b")
+                m=m+1;
+                if(document.examForm.ten.value=="a")
+                m=m+1;
+        alert("Thankyou for attending!! \n score is:"+m+"out of 10");
+            }
+        </script>
+    </head>
+    <body bgcolor="#DED6CE">
+        <form name="examForm" onsubmit="return exam()" method="get">
+            <h2 style="color:; text-align:center; ">Online Examination</h2>
+            Enter your name: <input type="text" name="nm">
+            <form>
+               
+                <p>1. What is the capital of India?</p>
+                <input type="radio" name="one" value="a">a.Delhi<br>
+                <input type="radio" name="one" value="b">b.Maharashtra<br>
+            
+               
+                <p>2. Which planet is called a red planet?</p>
+                <input type="radio" name="two" value="a">a.Uranus<br>
+                <input type="radio" name="two" value="b">b.Mars<br>
+            
+                
+                <p>3. Who was the first prime minister of India?  </p>
+                <input type="radio" name="three" value="a">a.Jawaharlal Nehru  <br>
+                <input type="radio" name="three" value="b">b.Lal Bahadur Shastri <br>
+            
+                
+                <p>4. Which is the tallest mountain in the world?</p>
+                <input type="radio" name="four" value="a">a.Mount Everest<br>
+                <input type="radio" name="four" value="b">b.Manaslu<br>
+            
+               
+                <p>5. Who was the first woman to win a Nobel Prize? </p>
+                <input type="radio" name="five" value="a">a.Rita Levi-Montalcini<br>
+                <input type="radio" name="five" value="b">b.Marie Curie <br>
+            
+               
+                <p>6. Who is known as the Iron Man of India?</p>
+                <input type="radio" name="six" value="a">a.Lal Bahadur Shastri<br>
+                <input type="radio" name="six" value="b">b.Sardar Vallabhbhai Patel<br>
+            
+                
+                <p>7. Who wrote the play 'Romeo and Juliet'?</p>
+                <input type="radio" name="seven" value="a">a.William Shakespeare <br>
+                <input type="radio" name="seven" value="b">b.Leo Tolstoy<br>
+            
+                
+                <p>8. Who is known as the Nightingale of India?</p>
+                <input type="radio" name="eight" value="a">a.Kalpana Chawla<br>
+                <input type="radio" name="eight" value="b">b.Sarojini Naidu<br>
+            
+                
+                <p>9.What is the hardest natural substance on Earth?  </p>
+                <input type="radio" name="nine" value="a">a.Gold<br>
+                <input type="radio" name="nine" value="b">b.Diamond<br>
+            
+               
+                <p>10. Which country is known as the Land of Maple Leaf?</p>
+                <input type="radio" name="ten" value="a">a.Canada<br>
+                <input type="radio" name="ten" value="b">b.Brazil<br>
+            <p>
+                <input style="background-color:#77DD77;" type="submit" value="Submit" >
+                <input style="background-color:#FFFAA0;" type="reset" value="Reset" id="">
+            </p>
+        </form>
+    </body>
+</html>
