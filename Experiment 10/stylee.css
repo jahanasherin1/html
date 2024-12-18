@@ -1,0 +1,27 @@
+body {
+            background-color: bisque;
+            font-family: Arial, sans-serif; /* Clean font */
+            display: flex;
+            justify-content: center;
+            align-items:top;
+            height: 100vh;
+            margin: 0;
+        }
+
+ form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            align-items: center;
+            margin: 50;
+        }
+
+h3 {
+            
+            color: #333;
+    font-size: 24px;
+    margin-top: 3px;
+        }

@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Registration form</title>
+ <link rel="stylesheet" href="stylee.css">
+
+</head>
+<body>
+
+<form name="form" method="post" onsubmit="return validateform()">
+<h3>FORM</h3>
+Name:<input type="text" name="name"><br><br>
+DOB:<input type="date"  name="date"><br><br>
+Upload photo:<input type="file" name="myfile" size="30"><br><br>
+Email:<input type="text"  name="mail"><br><br>
+Mobile number:<input type="tel" name="mob" id="tnob"><br><br>
+Gender:<br><br>
+<input type="radio">Male
+<input type="radio">Female
+<input type="radio">Other<br><br>
+Username:<input type="text" name="user"><br><br>
+Password:<input type="password" name="passcode"><br><br>
+Confirm Password:<input type="password" name="cpasscode"><br><br>
+<input type="submit" value="submit">
+<input type="reset" value="reset">
+</form>
+<script>
+function validateform()
+{
+var nm=document.form.name.value;
+var email=document.form.mail.value;
+var at=email.indexOf("@");
+var dot=email.lastIndexOf(".");
+var mob=document.form.mob.value;
+var user=document.form.user.value;
+var passcode=document.form.passcode.value;
+var cpasscode=document.form.cpasscode.value;
+ 
+ // Name validation
+if(nm=="")
+{
+alert("Enter Name !!");
+document.form.Name.focus();
+return false;
+}
+
+// Email validation 
+if(email=="")
+{
+alert("Enter Email !!");
+document.form.mail.focus();
+return false;
+}
+else if(at <1 ||dot<at+2 || dot+2>=email.length)
+{
+alert("Please enter valid email ");
+document.form.mail.focus();
+return false;
+}
+
+ // Mobile number validation
+ if(mob=="")
+{
+alert("Enter mobile number:");
+document.form.mob.focus();
+return false;
+}
+else if (isNaN(mob))
+{
+alert("Please enter valid mobile number");
+document.form.mob.focus();
+return false;
+}
+else if(mob.length!=10)
+{
+alert(" Enter mobile number with 10 digits");
+document.form.mob.focus();
+return false;
+}
+ 
+ // Username validation
+if(user=="")
+{
+alert("Enter user Name !! ");
+document.form.user.focus();
+return false;
+}
+
+ // Password validation
+if(passcode =="")
+{
+alert("Enter the password !!");
+return false;
+}
+else if(passcode.length<6)
+{
+alert("Enter  6 digit password ");
+return false;
+}
+
+ // Confirm password validation
+if(cpasscode=="")
+{
+alert("Confirm the password");
+return false;
+}
+else if(cpasscode !=passcode)
+{
+alert("Password must be same");
+return false;
+}
+return true;  // All validations passed
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
