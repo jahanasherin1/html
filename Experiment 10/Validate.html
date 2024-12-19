@@ -28,6 +28,7 @@ function validateform()
 {
 var nm=document.form.name.value;
 var email=document.form.mail.value;
+var date=document.form.date.value;
 var at=email.indexOf("@");
 var dot=email.lastIndexOf(".");
 var mob=document.form.mob.value;
@@ -40,6 +41,15 @@ if(nm=="")
 {
 alert("Enter Name !!");
 document.form.Name.focus();
+return false;
+}
+
+ 
+ // DOB validation
+if(date=="")
+{
+alert("Enter DOB !!");
+document.form.date.focus();
 return false;
 }
 
